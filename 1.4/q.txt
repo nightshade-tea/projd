@@ -1,0 +1,1 @@
+Escreva um programa que calcule a expressão b^2 -4ac (o ∆ de uma equação de segundo grau), onde a, b e c estão armazenados nos registradores a0, a1 e a2, respectivamente. Guarde o valor em a0.
