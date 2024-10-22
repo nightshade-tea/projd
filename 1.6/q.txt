@@ -1,0 +1,1 @@
+Escreva um programa que, dados números a e b armazenados nos registradores a0 e a1, respectivamente, guarde o valor 1 em a0 caso a < b, e o valor 0 caso contrário. Não use instruções de salto, slt ou sltu.
