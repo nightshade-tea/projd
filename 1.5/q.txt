@@ -1,0 +1,1 @@
+Resolva o exercício anterior utilizando somente duas instruções de multiplicação.
