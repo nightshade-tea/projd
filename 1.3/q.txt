@@ -1,0 +1,1 @@
+Escreva um programa que calcule a média entre três números armazenados nos registradores a0, a1 e a2. Guarde o resultado em a0.
