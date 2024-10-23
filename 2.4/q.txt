@@ -1,0 +1,1 @@
+Escreva um programa que conte a quantidade de “trailing zeros” de um número binário armazenado no registrador a0, guardando o resultado em a0. “Trailing zeros” são os zeros à direita do número, ou seja, os bits zero antes do primeiro bit 1. Por exemplo, o número de “trailing zeros” do número binário 1011000 é 3.
