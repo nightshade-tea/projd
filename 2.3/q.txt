@@ -1,0 +1,1 @@
+Escreva um programa que calcule a quantidade de bits 1 em um número binário armazenado no registrador a0. Guarde o resultado em a0.
