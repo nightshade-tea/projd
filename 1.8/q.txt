@@ -1,0 +1,1 @@
+Resolva o exercício anterior sem utilizar as instruções and e andi. Dica: use xor e slli.
