@@ -1,0 +1,1 @@
+Escreva um programa que, dado um número armazenado em a0, guarde em a0 o valor do segundo byte desse número e em a1 o valor do quarto byte.
