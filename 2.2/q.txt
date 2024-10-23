@@ -1,0 +1,1 @@
+Escreva um programa que calcule o n-ésimo número da sequência de Fibonacci, onde n está no registrador a0, armazenando-o no registrador a0. Note que tanto o primeiro quanto o segundo número de Fibonacci são 1.
