@@ -1,16 +1,18 @@
 .global _start
 
+.section .text
 _start:
-    addi a7, zero, 64 # write()
-    addi a0, zero, 1
+    li   a7, 64 # write()
+    li   a0, 1
     la   a1, hello
-    addi a2, zero, 13
+    li   a2, 13
     ecall
 
-    addi a7, zero, 93 # exit()
-    addi a0, zero, 0
+    li   a7, 93 # exit()
+    li   a0, 0
     ecall
 
+.section .data
 hello:
     .ascii "Hello, World\n"
 

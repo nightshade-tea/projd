@@ -1,15 +1,27 @@
 .global _start
 
+.section .text
 _start:
-    addi a0, x0, 10
-    addi a1, x0, 6
-    addi a2, x0, 11
+    li   t0, 10
+    li   t1, 6
+    li   t2, 11
 
-    add  a0, a0, a1 # a0 += a1
-    add  a0, a0, a2 # a0 += a2
-    addi a1, x0, 3
-    div  a0, a0, a1 # a0 /= 3
+    add  t0, t0, t1
+    add  t0, t0, t2
+    li   t1, 3
+    div  t0, t0, t1
 
-    addi a7, x0, 93 # exit()
+    addi sp, sp, -8
+    sw   t0, 0(sp)
+
+    li   a7, 64 # write()
+    li   a0, 1
+    mv   a1, sp
+    li   a2, 8
+    ecall
+
+    addi sp, sp, 8
+
+    li   a7, 93 # exit()
     ecall
 
