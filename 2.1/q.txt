@@ -1,0 +1,1 @@
+Escreva um programa que calcule o fatorial de um número armazenado no registrador a0, guardando o resultado em a0.
