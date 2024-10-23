@@ -2,14 +2,14 @@
 
 .section .text
 _start:
-    li   t0, 3
-    li   t1, 6
+    li   a0, 3
+    li   a1, 6
 
-    sub  t0, t0, t1 # t0 = a-b
-    srli t0, t0, 63 # t0 = t0 sign bit
+    sub  a0, a0, a1 # a0 = a-b
+    srli a0, a0, 63 # a0 = a0 sign bit
 
     addi sp, sp, -8
-    sw   t0, 0(sp)
+    sw   a0, 0(sp)
 
     li   a7, 64 # write()
     li   a0, 1
@@ -20,5 +20,6 @@ _start:
     addi sp, sp, 8
 
     li   a7, 93 # exit()
+    li   a0, 0
     ecall
 

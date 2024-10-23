@@ -2,18 +2,18 @@
 
 .section .text
 _start:
-    li   t0, 5 # n
+    li   a0, 5 # n
 
-    li   t1, 1
+    li   t0, 1
 for:
-    bge  x0, t0, out # !(n > 0) -> out
-    mul  t1, t1, t0  # t1 = t1*n
-    addi t0, t0, -1  # n--
+    bge  x0, a0, out # !(n > 0) -> out
+    mul  t0, t0, a0  # t0 = t0*n
+    addi a0, a0, -1  # n--
     jal  x0, for
 
-out: # t1 is n!
+out: # t0 is n!
     addi sp, sp, -8
-    sw   t1, 0(sp)
+    sw   t0, 0(sp)
 
     li   a7, 64 # write()
     li   a0, 1

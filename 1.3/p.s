@@ -2,17 +2,17 @@
 
 .section .text
 _start:
-    li   t0, 10
-    li   t1, 6
-    li   t2, 11
+    li   a0, 10
+    li   a1, 6
+    li   a2, 11
 
-    add  t0, t0, t1
-    add  t0, t0, t2
-    li   t1, 3
-    div  t0, t0, t1
+    add  a0, a0, a1
+    add  a0, a0, a2
+    li   a1, 3
+    div  a0, a0, a1
 
     addi sp, sp, -8
-    sw   t0, 0(sp)
+    sw   a0, 0(sp)
 
     li   a7, 64 # write()
     li   a0, 1
@@ -23,5 +23,6 @@ _start:
     addi sp, sp, 8
 
     li   a7, 93 # exit()
+    li   a0, 0
     ecall
 

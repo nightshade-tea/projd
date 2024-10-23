@@ -2,13 +2,13 @@
 
 .section .text
 _start:
-    li   t0, 0xdeadbeef
+    li   a0, 0xdeadbeef
 
-    slli t1, t0, 32
-    srli t1, t1, 56
-
-    slli t0, t0, 48
+    slli t0, a0, 48
     srli t0, t0, 56
+
+    slli t1, a0, 32
+    srli t1, t1, 56
 
     addi sp, sp, -16
     sw   t0, 0(sp)
