@@ -1,0 +1,1 @@
+Escreva um programa que armazene os n primeiros números naturais em um vetor, onde n está armazenado no registrador a0.
