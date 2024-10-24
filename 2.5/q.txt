@@ -1,0 +1,1 @@
+Escreva um programa que verifique se um número armazenado em a0 é primo. Guarde 1 em a0 caso seja, e 0 caso contrário.
