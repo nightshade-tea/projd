@@ -1,0 +1,1 @@
+Escreva um programa que some os elementos de dois vetores A e B na memória, guardando em um terceiro vetor C, tal que Ci = Ai + Bi.
