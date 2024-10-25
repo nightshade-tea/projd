@@ -1,0 +1,1 @@
+Escreva um programa que armazene a sequência de Fibonacci até o n-ésimo número na memória, onde n está armazenado no registrador a0. Para simplificar, considere apenas n ≥ 2.
