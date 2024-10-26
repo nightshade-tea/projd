@@ -24,16 +24,16 @@ oif:
     jal  x0, for
 
 out:
-    addi sp, sp, -8
-    sw   t0, 0(sp)
+    addi sp, sp, -1
+    sb   t0, 0(sp)
 
     li   a7, 64 # write()
     li   a0, 1
     mv   a1, sp
-    li   a2, 8
+    li   a2, 1
     ecall
 
-    addi sp, sp, 8
+    addi sp, sp, 1
 
     li   a7, 93 # exit()
     li   a0, 0

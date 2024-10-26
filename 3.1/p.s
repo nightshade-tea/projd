@@ -15,7 +15,7 @@ for:
 
     slli t1, t0, 2
     add  t1, t1, sp
-    sh   t0, 0(t1)
+    sw   t0, 0(t1)
 
     addi t0, t0, 1
     jal  x0, for

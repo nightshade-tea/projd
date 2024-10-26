@@ -16,16 +16,16 @@ loop:
     jal  x0, loop
 
 out:
-    addi sp, sp, -8
+    addi sp, sp, -4
     sw   t0, 0(sp)
 
     li   a7, 64 # write()
     li   a0, 1
     mv   a1, sp
-    li   a2, 8
+    li   a2, 4
     ecall
 
-    addi sp, sp, 8
+    addi sp, sp, 4
 
     li   a7, 93 # exit()
     li   a0, 0

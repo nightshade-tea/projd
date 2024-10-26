@@ -9,4 +9,4 @@ clean:
 
 run: build
 	@echo ""
-	@./p | hexdump -v -e '8/1 "%02x " "\n"' | awk '{printf "%d::0x", NR; for(i=8; i>0; i--) printf "%s ", $$i; printf "\n"}' | tr -d ' '
+	@./p | hexdump -v -e '4/1 "%02x " "\n"' | awk '{printf "%d::0x", NR; for(i=8; i>0; i--) printf "%s ", $$i; printf "\n"}' | tr -d ' '
