@@ -1,0 +1,21 @@
+Traduza o seguinte programa de C para Assembly. Use ecall para traduzir as chamadas printf. Considere que o argumento “a0” da função main é o registrador a0, use o comando set do emulador para testar o programa com diferentes números.
+
+int fatorial(int n)
+{
+    int f = 1;
+
+    for (int i = 2; i <= n; i++)
+        f = f * i;
+    
+    return f;
+}
+
+int main(int a0)
+{
+    f = fatorial(a0);
+
+    if (f > a0 * 10)
+        printf("O fatorial eh mais que 10x maior.\n");
+    else
+        printf("O fatorial eh menos que 10x maior.\n");
+}
