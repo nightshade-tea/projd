@@ -1,0 +1,1 @@
+Dados dois vetores de mesmo tamanho: um vetor de valores e outro de pesos, escreva um programa que calcule a média ponderada dos valores do primeiro vetor com seus respectivos pesos no segundo vetor. Guarde o resultado no registrador a0.
