@@ -9,4 +9,6 @@
 
 [RISC-V Reference Card](https://www.cl.cam.ac.uk/teaching/1617/ECAD+Arch/files/docs/RISCVGreenCardv8-20151013.pdf)
 
+[RISC-V Instructions cheatsheet](http://blog.translusion.com/images/posts/RISC-V-cheatsheet-RV32I-4-3.pdf)
+
 [RISC-V Linux syscalls table](https://jborza.com/post/2021-05-11-riscv-linux-syscalls/)
