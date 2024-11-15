@@ -46,7 +46,7 @@
     xor {rd: register}, {rs1: register}, {rs2: register} => 0b0000000 @ rs2 @ rs1 @ 0b111 @ rd @ 0b00
 
     addi {rd: register}, {rs1: register}, {imm: s11} => imm @ rs1 @ 0b000 @ rd @ 0b01
-    lw   {rd: register}, {rs1: register}, {imm: s11} => imm @ rs1 @ 0b001 @ rd @ 0b01
+    lw   {rd: register}, {imm: s11}({rs1: register}) => imm @ rs1 @ 0b001 @ rd @ 0b01
     jalr {rd: register}, {rs1: register}, {imm: s11} => imm @ rs1 @ 0b010 @ rd @ 0b01
     slli {rd: register}, {rs1: register}, {imm: s11} => imm @ rs1 @ 0b011 @ rd @ 0b01
     modi {rd: register}, {rs1: register}, {imm: s11} => imm @ rs1 @ 0b100 @ rd @ 0b01
@@ -54,7 +54,7 @@
     ori  {rd: register}, {rs1: register}, {imm: s11} => imm @ rs1 @ 0b110 @ rd @ 0b01
     xori {rd: register}, {rs1: register}, {imm: s11} => imm @ rs1 @ 0b111 @ rd @ 0b01
 
-    sw   {rs2: register}, {rs1: register}, {imm: s11} => imm[10:4] @ rs2 @ rs1 @ 0b000 @ imm[3:0] @ 0b10
+    sw   {rs2: register}, {imm: s11}({rs1: register}) => imm[10:4] @ rs2 @ rs1 @ 0b000 @ imm[3:0] @ 0b10
     halt                                              => 0b000000000000000 @ 0b001 @ 0b0000 @ 0b10
     beq  {rs1: register}, {rs2: register}, {imm: s11} => imm[10:4] @ rs2 @ rs1 @ 0b100 @ imm[3:0] @ 0b10
     bne  {rs1: register}, {rs2: register}, {imm: s11} => imm[10:4] @ rs2 @ rs1 @ 0b101 @ imm[3:0] @ 0b10
@@ -66,4 +66,3 @@
 
 
 _start:
-	add r1, r1, r2
