@@ -294,8 +294,7 @@
     <comp lib="4" loc="(930,390)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 24
-12005 ffa205 20b 4204 2444 4284 24c9 42c4
-42
+6005 a009 438e 2005 10a 5 42
 </a>
       <a name="dataWidth" val="24"/>
       <a name="label" val="MI"/>
@@ -1625,6 +1624,7 @@
       <a name="size" val="30"/>
     </comp>
     <comp lib="1" loc="(780,620)" name="AND Gate">
+      <a name="negate1" val="true"/>
       <a name="size" val="30"/>
     </comp>
     <comp lib="1" loc="(810,170)" name="OR Gate">
@@ -1657,7 +1657,7 @@
     <wire from="(580,530)" to="(580,690)"/>
     <wire from="(580,530)" to="(690,530)"/>
     <wire from="(580,690)" to="(580,740)"/>
-    <wire from="(580,690)" to="(740,690)"/>
+    <wire from="(580,690)" to="(730,690)"/>
     <wire from="(580,740)" to="(580,810)"/>
     <wire from="(580,740)" to="(640,740)"/>
     <wire from="(580,810)" to="(640,810)"/>
@@ -1742,9 +1742,9 @@
     <wire from="(720,810)" to="(730,810)"/>
     <wire from="(730,520)" to="(730,530)"/>
     <wire from="(730,530)" to="(740,530)"/>
+    <wire from="(730,630)" to="(730,690)"/>
+    <wire from="(730,630)" to="(740,630)"/>
     <wire from="(740,610)" to="(750,610)"/>
-    <wire from="(740,630)" to="(740,690)"/>
-    <wire from="(740,630)" to="(750,630)"/>
     <wire from="(760,750)" to="(790,750)"/>
     <wire from="(760,820)" to="(770,820)"/>
     <wire from="(770,540)" to="(790,540)"/>
