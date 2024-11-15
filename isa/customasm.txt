@@ -1,0 +1,69 @@
+#subruledef register
+{
+    r0  => 0x0
+    r1  => 0x1
+    r2  => 0x2
+    r3  => 0x3
+    r4  => 0x4
+    r5  => 0x5
+    r6  => 0x6
+    r7  => 0x7
+    r8  => 0x8
+    r9  => 0x9
+    r10 => 0xA
+    r11 => 0xB
+    r12 => 0xC
+    r13 => 0xD
+    r14 => 0xE
+    r15 => 0xF
+
+    rad => 0x1
+    rbp => 0x2
+    rsp => 0x3
+    rt0 => 0x4
+    rt1 => 0x5
+    rt2 => 0x6
+    rt3 => 0x7
+    rs0 => 0x8
+    rs1 => 0x9
+    rs2 => 0xA
+    rs3 => 0xB
+    ra0 => 0xC
+    ra1 => 0xD
+    ra2 => 0xE
+    ra3 => 0xF
+}
+
+#ruledef
+{
+    add {rd: register}, {rs1: register}, {rs2: register} => 0b0000000 @ rs2 @ rs1 @ 0b000 @ rd @ 0b00
+    sub {rd: register}, {rs1: register}, {rs2: register} => 0b0000000 @ rs2 @ rs1 @ 0b001 @ rd @ 0b00
+    mul {rd: register}, {rs1: register}, {rs2: register} => 0b0000000 @ rs2 @ rs1 @ 0b010 @ rd @ 0b00
+    div {rd: register}, {rs1: register}, {rs2: register} => 0b0000000 @ rs2 @ rs1 @ 0b011 @ rd @ 0b00
+    mod {rd: register}, {rs1: register}, {rs2: register} => 0b0000000 @ rs2 @ rs1 @ 0b100 @ rd @ 0b00
+    and {rd: register}, {rs1: register}, {rs2: register} => 0b0000000 @ rs2 @ rs1 @ 0b101 @ rd @ 0b00
+    or  {rd: register}, {rs1: register}, {rs2: register} => 0b0000000 @ rs2 @ rs1 @ 0b110 @ rd @ 0b00
+    xor {rd: register}, {rs1: register}, {rs2: register} => 0b0000000 @ rs2 @ rs1 @ 0b111 @ rd @ 0b00
+
+    addi {rd: register}, {rs1: register}, {imm: s11} => imm @ rs1 @ 0b000 @ rd @ 0b01
+    lw   {rd: register}, {rs1: register}, {imm: s11} => imm @ rs1 @ 0b001 @ rd @ 0b01
+    jalr {rd: register}, {rs1: register}, {imm: s11} => imm @ rs1 @ 0b010 @ rd @ 0b01
+    slli {rd: register}, {rs1: register}, {imm: s11} => imm @ rs1 @ 0b011 @ rd @ 0b01
+    modi {rd: register}, {rs1: register}, {imm: s11} => imm @ rs1 @ 0b100 @ rd @ 0b01
+    andi {rd: register}, {rs1: register}, {imm: s11} => imm @ rs1 @ 0b101 @ rd @ 0b01
+    ori  {rd: register}, {rs1: register}, {imm: s11} => imm @ rs1 @ 0b110 @ rd @ 0b01
+    xori {rd: register}, {rs1: register}, {imm: s11} => imm @ rs1 @ 0b111 @ rd @ 0b01
+
+    sw   {rs2: register}, {rs1: register}, {imm: s11} => imm[10:4] @ rs2 @ rs1 @ 0b000 @ imm[3:0] @ 0b10
+    halt                                              => 0b000000000000000 @ 0b001 @ 0b0000 @ 0b10
+    beq  {rs1: register}, {rs2: register}, {imm: s11} => imm[10:4] @ rs2 @ rs1 @ 0b100 @ imm[3:0] @ 0b10
+    bne  {rs1: register}, {rs2: register}, {imm: s11} => imm[10:4] @ rs2 @ rs1 @ 0b101 @ imm[3:0] @ 0b10
+    bge  {rs1: register}, {rs2: register}, {imm: s11} => imm[10:4] @ rs2 @ rs1 @ 0b110 @ imm[3:0] @ 0b10
+    blt  {rs1: register}, {rs2: register}, {imm: s11} => imm[10:4] @ rs2 @ rs1 @ 0b111 @ imm[3:0] @ 0b10
+
+    li   {rd: register}, {imm: s16} => imm @ 0b00 @ rd @ 0b11
+}
+
+
+_start:
+	add r1, r1, r2
