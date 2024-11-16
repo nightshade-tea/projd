@@ -61,7 +61,7 @@
     bge  {rs1: register}, {rs2: register}, {imm: s11} => imm[10:4] @ rs2 @ rs1 @ 0b110 @ imm[3:0] @ 0b10
     blt  {rs1: register}, {rs2: register}, {imm: s11} => imm[10:4] @ rs2 @ rs1 @ 0b111 @ imm[3:0] @ 0b10
 
-    li   {rd: register}, {imm: s16} => imm @ 0b00 @ rd @ 0b11
+    li   {rd: register}, {imm: i16} => imm @ 0b00 @ rd @ 0b11
 }
 
 
