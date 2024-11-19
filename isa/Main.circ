@@ -29,7 +29,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <main name="BancoReg"/>
+  <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -1781,20 +1781,17 @@
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
       <a name="label" val="RB"/>
-      <a name="radix" val="16"/>
     </comp>
     <comp lib="0" loc="(790,420)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
       <a name="label" val="CLK"/>
-      <a name="radix" val="16"/>
     </comp>
     <comp lib="0" loc="(820,530)" name="Constant"/>
     <comp lib="0" loc="(850,660)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
       <a name="label" val="RESET"/>
-      <a name="radix" val="16"/>
     </comp>
     <comp lib="0" loc="(960,540)" name="Bit Extender">
       <a name="out_width" val="32"/>
@@ -1828,16 +1825,16 @@
     <comp lib="4" loc="(820,480)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="8" loc="(510,573)" name="Text">
-      <a name="text" val="ULA"/>
-    </comp>
-    <comp lib="8" loc="(510,631)" name="Text">
-      <a name="text" val="IP"/>
-    </comp>
-    <comp lib="8" loc="(513,470)" name="Text">
+    <comp lib="8" loc="(510,470)" name="Text">
       <a name="text" val="IP + 1"/>
     </comp>
-    <comp lib="8" loc="(524,508)" name="Text">
+    <comp lib="8" loc="(510,570)" name="Text">
+      <a name="text" val="ULA"/>
+    </comp>
+    <comp lib="8" loc="(510,630)" name="Text">
+      <a name="text" val="IP"/>
+    </comp>
+    <comp lib="8" loc="(520,505)" name="Text">
       <a name="text" val="IP + Imm"/>
     </comp>
     <wire from="(350,520)" to="(360,520)"/>
