@@ -157,7 +157,12 @@
     <comp lib="4" loc="(930,390)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 24
-10e 2005 10a 5 42
+26005 8009 4204 2444 42c4 4304 6005 4344
+4384 43c4 26005 14305 10345 6385 1e3c5 dead07
+202c5 beef07 2002 5 45 cafe07 202c5 2006
+2005 4009 230a ffe005 804302 434a ffe005 802342
+258a ffe005 804382 43ca ffe005 8025c2 5208d 9e005
+42 c2005 681
 </a>
       <a name="dataWidth" val="24"/>
       <a name="label" val="MI"/>
